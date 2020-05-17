@@ -1,5 +1,82 @@
 .heading-primary {
     color: $color-dark;
     font-size: 4.5rem;
-    margin-bottom: 15rem;
+    margin-bottom: 16rem;
+
+    &--main {
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: $merriweather;
+        letter-spacing: 0.3rem;
+        line-height: 0.622;
+        text-shadow: 0 .9rem 1rem rgba(0, 0, 0, 0.24);
+    }
+
+    &--main_accent {
+        display: inline-block;
+        background-color: $color-blue-3;
+        padding: 1.3rem 1rem;
+    }
+
+    &--sub {
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: $merriweather;
+        white-space: nowrap;
+        line-height: 0.622;
+        text-shadow: 0 .9rem 1rem rgba(0, 0, 0, 0.24);
+    }
+
+    &--sub_accent {
+        display: inline-block;
+        background-color: $color-blue-3;
+        padding: 1.3rem 1rem;
+    }
+}
+
+.heading-secondary {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 14.7rem;
+
+    &--main {
+        text-transform: uppercase;
+        font-family: $montserrat-bold;
+        color: #000;
+        font-size: 3.8rem;
+        display: block;
+        line-height: 0.737;
+        margin-bottom: 1rem;
+    }
+
+    &--sub {
+        display: block;
+        text-transform: uppercase;
+        font-family: $merriweather;
+        color: $color-primary;
+        font-size: 1.8rem;
+        opacity: .62;
+        line-height: 1.556;
+        letter-spacing: .15rem;
+    }
+}
+
+.heading-tertiary {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: $merriweather-bold;
+    color: $color-primary;
+    line-height: 1.5rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: .165rem;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    font-family: $raleway;
+    color: #000;
+    line-height: 1.75;
+    opacity: .74;
+    margin-bottom: 4.5rem;
+    letter-spacing: .15rem;
 }

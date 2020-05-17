@@ -11,10 +11,28 @@ $color-gray-1: #767070;
 $color-blue: #76f4ea;
 $color-blue-1: #6df6eb;
 $color-blue-2: #6eeee4;
+$color-blue-3: #b2f2ee;
 
 $color-white: #fff;
 $color-white-2: #f8fafa;
 $color-white-3: #f9fbfb;
 
-// FONT
+// FONT SIZE
 $default-font-size: 1.6rem;
+
+// FONTS
+$merriweather: 'Merriweather-Regular', sans-serif;
+$merriweather-bold: 'Merriweather-Bold', sans-serif;
+
+$montserrat: 'Montserrat-Regular', sans-serif;
+$montserrat-bold: 'Montserrat-Bold', sans-serif;
+
+$raleway: 'Raleway-Regular', sans-serif;
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 1.3rem;
+$gutter-vertical-small: 1.4rem;
+$gutter-horizontal: 1rem;
+$gutter-horizontal-small: 2.5rem;
+$gutter-horizontal-smaller: 1.6rem;

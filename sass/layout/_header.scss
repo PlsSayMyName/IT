@@ -1,5 +1,6 @@
 .header {
-	height: 100vh;
+	background: $color-gray;
+	height: 80.5rem;
 	position: relative;
 	&__logo-box {
 		position: absolute;
@@ -10,8 +11,14 @@
 	&__text-box {
 		position: absolute;
 		left: 50%;
-		top: 40%;
+		top: 56%;
 		transform: translate(-50%, -50%);
 		text-align: center;
+	}
+
+	&__img-box {
+		position: absolute;
+		bottom: 7rem;
+		right: 20rem;
 	}
 }
