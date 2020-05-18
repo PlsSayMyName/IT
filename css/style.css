@@ -38,6 +38,14 @@
   font-style: normal;
   font-display: swap; }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 *,
 *::after,
 *::before {
@@ -125,11 +133,45 @@ a {
   margin-bottom: 4.5rem;
   letter-spacing: .15rem; }
 
+.contact-us__adress--text {
+  display: inline-block;
+  font-family: "Raleway-Regular", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  opacity: .70;
+  line-height: 1.6; }
+  .contact-us__adress--text:nth-of-type(4) {
+    margin-bottom: 2.5rem; }
+
+.our-team-box__inner--heading-main {
+  font-family: "Merriweather-Bold", sans-serif;
+  line-height: 1.2;
+  font-size: 2rem;
+  color: #272727;
+  text-transform: uppercase; }
+
+.our-team-box__inner--heading-sub {
+  font-family: "Merriweather-Regular", sans-serif;
+  font-size: 1.5rem;
+  color: #767070;
+  line-height: 1.2; }
+
+.our-team-box__inner > .paragraph {
+  line-height: 1.5;
+  letter-spacing: .1rem;
+  margin-bottom: 3.5rem; }
+
 .text-center {
   text-align: center !important; }
 
 .form__group:not(:last-child) {
-  margin-bottom: 3rem; }
+  margin-bottom: 1.3rem; }
+
+.form__group:nth-of-type(4) {
+  margin-bottom: 4rem; }
+
+.form__group:nth-of-type(4) > .form__input {
+  padding-bottom: 8.5rem; }
 
 .form__form {
   width: 50%; }
@@ -138,10 +180,11 @@ a {
   font-family: "Raleway-Regular", sans-serif;
   font-size: 1.5rem;
   border: none;
-  border-bottom: 1px solid black;
-  width: 95%;
+  border-bottom: 1px solid #fff;
+  width: 100%;
   display: block;
-  background-color: transparent; }
+  background-color: transparent;
+  padding: 1.5rem .4rem; }
 
 .btn {
   display: inline-block;
@@ -158,6 +201,33 @@ a {
   border-radius: .2rem;
   padding: 1rem 4.8rem;
   letter-spacing: .2rem; }
+  .btn--blue {
+    background-color: #6eeee4;
+    padding: 1rem 3.8rem;
+    border: transparent; }
+
+.footer {
+  padding: 10rem 0;
+  background-color: #262b2e; }
+  .footer__head {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-family: "Raleway-Regular", sans-serif;
+    color: #fff;
+    opacity: .80;
+    line-height: 1.563;
+    margin-bottom: 2rem; }
+  .footer__social-icon-box {
+    list-style: none;
+    text-align: center; }
+  .footer__social--icon {
+    display: inline-block;
+    font-size: 5rem;
+    cursor: pointer; }
+    .footer__social--icon:not(:last-child) {
+      margin-right: .8rem; }
+    .footer__social--icon:hover {
+      color: #6eeee4; }
 
 .row {
   max-width: 114rem;
@@ -230,14 +300,59 @@ a {
 
 .our-team-box {
   margin-top: -2rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  position: relative; }
+  .our-team-box__inner {
+    background-color: #76f4ea;
+    opacity: .98;
+    width: 90%;
+    height: 55%;
+    margin: 0 auto;
+    padding: 3.5rem 3.5rem;
+    text-align: left;
+    position: absolute;
+    top: 17.4rem;
+    left: 2rem;
+    display: none; }
+    .our-team-box__inner--heading {
+      margin-bottom: 2rem; }
+    .our-team-box__inner::before {
+      content: "";
+      position: absolute;
+      top: -3rem;
+      left: 1.8rem;
+      width: 2rem;
+      height: 2rem;
+      border: 1.1rem solid transparent;
+      border-bottom: 2.2rem solid #76f4ea; }
+    .our-team-box__inner--icon-box-icons {
+      display: inline-block;
+      font-size: 1.5rem;
+      cursor: pointer; }
+      .our-team-box__inner--icon-box-icons:not(:last-child) {
+        margin-right: 1.5rem; }
+  .our-team-box:hover .our-team-box__inner {
+    display: block;
+    animation: moveInBottom .5s ease-out; }
 
 .contact-us {
   height: 100vh;
+  padding: 21rem 0;
   position: relative;
   background-image: linear-gradient(180deg, #f9fbfb 0%, rgba(255, 255, 255, 0.1) 50%, rgba(249, 251, 251, 0.1) 100%), url(/img/footer-bg.jpg);
   background-size: cover;
   background-position: top; }
   .contact-us__form {
     background-color: #021623;
-    padding: 3rem; }
+    padding: 3rem;
+    width: 61rem;
+    height: 46rem; }
+  .contact-us__adress {
+    background-color: #021623;
+    margin-left: 7rem;
+    padding: 2rem 3rem;
+    height: 46rem;
+    width: 50rem;
+    white-space: pre-line; }
+    .contact-us__adress--map {
+      padding: .7rem 0; }

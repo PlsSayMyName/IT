@@ -1,0 +1,33 @@
+.footer {
+    padding: 10rem 0;
+    background-color: $color-dark-3;
+
+    &__head {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-family: $raleway;
+        color: $color-white;
+        opacity: .80;
+        line-height: 1.563;
+        margin-bottom: 2rem;
+    }
+
+    &__social-icon-box {
+        list-style: none;
+        text-align: center;
+    }
+
+    &__social--icon {
+        display: inline-block;
+        font-size: 5rem;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: .8rem;
+        }
+
+        &:hover {
+            color: $color-blue-2;
+        }
+    }
+}

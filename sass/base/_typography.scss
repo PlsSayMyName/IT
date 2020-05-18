@@ -80,3 +80,44 @@
     margin-bottom: 4.5rem;
     letter-spacing: .15rem;
 }
+
+.contact-us {
+    &__adress--text {
+        display: inline-block;
+        font-family: $raleway;
+        font-size: 1.5rem;
+        color: $color-white;
+        opacity: .70;
+        line-height: 1.6;
+
+        &:nth-of-type(4) {
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+.our-team-box {
+    &__inner {
+
+        &--heading-main {
+            font-family: $merriweather-bold;
+            line-height: 1.2;
+            font-size: 2rem;
+            color: $color-dark-1;
+            text-transform: uppercase;
+        }
+
+        &--heading-sub {
+            font-family: $merriweather;
+            font-size: 1.5rem;
+            color: $color-gray-1;
+            line-height: 1.2;
+        }
+
+        & > .paragraph {
+            line-height: 1.5;
+            letter-spacing: .1rem;
+            margin-bottom: 3.5rem;
+        }
+    }
+}
