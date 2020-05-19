@@ -63,34 +63,34 @@
 			<div class="row">
 				<div class="col-1-of-3">
 					<div class="feature-box">
-						<img src="img/featured-works-1.jpg" alt="featured-works-1">
+						<img class="feature-box__img" src="img/featured-works-1.jpg" alt="featured-works-1">
 					</div>
 				</div>
 				<div class="col-1-of-3">
 					<div class="feature-box">
-						<img src="img/featured-works-2.jpg" alt="featured-works-2">
+						<img class="feature-box__img" src="img/featured-works-2.jpg" alt="featured-works-2">
 					</div>
 				</div>
 				<div class="col-1-of-3">
 					<div class="feature-box">
-						<img src="img/featured-works-3.jpg" alt="featured-works-3">
+						<img class="feature-box__img" src="img/featured-works-3.jpg" alt="featured-works-3">
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-1-of-3">
 					<div class="feature-box">
-						<img src="img/featured-works-4.jpg" alt="featured-works-4">
+						<img class="feature-box__img" src="img/featured-works-4.jpg" alt="featured-works-4">
 					</div>
 				</div>
 				<div class="col-1-of-3">
 					<div class="feature-box">
-						<img src="img/featured-works-5.jpg" alt="featured-works-5">
+						<img class="feature-box__img" src="img/featured-works-5.jpg" alt="featured-works-5">
 					</div>
 				</div>
 				<div class="col-1-of-3">
 					<div class="feature-box">
-						<img src="img/featured-works-6.jpg" alt="featured-works-6">
+						<img class="feature-box__img" src="img/featured-works-6.jpg" alt="featured-works-6">
 					</div>
 				</div>
 			</div>
@@ -247,26 +247,27 @@
 		</section>
 		<section class="contact-us" id="#contact-us">
 			<div class="row">
-				<div class="col-1-of-2-big">
-					<div class="contact-us__form">
-						<form action="#" class="form">
-							<div class="form__group">
-								<input type="text" class="form__input" placeholder="Name" id="name" required>
-							</div>
-							<div class="form__group">
-								<input type="text" class="form__input" placeholder="Subject" id="subject" required>
-							</div>
-							<div class="form__group">
-								<input type="email" class="form__input" placeholder="E-mail" id="email" required>
-							</div>
-							<div class="form__group">
-								<input type="text" class="form__input" placeholder="Message" id="message" required>
-							</div>
-							<div class="form__group">
-								<button class="btn btn--blue">Send message</button>
-							</div>
-						</form>
-					</div>
+				<div class="contact-us__box">
+					<div class="col-1-of-2-big">
+						<div class="contact-us__form">
+							<form action="#" class="form">
+								<div class="form__group">
+									<input type="text" class="form__input" placeholder="Name" id="name" required>
+								</div>
+								<div class="form__group">
+									<input type="text" class="form__input" placeholder="Subject" id="subject" required>
+								</div>
+								<div class="form__group">
+									<input type="email" class="form__input" placeholder="E-mail" id="email" required>
+								</div>
+								<div class="form__group">
+									<input type="text" class="form__input" placeholder="Message" id="message" required>
+								</div>
+								<div class="form__group">
+									<button class="btn btn--blue">Send message</button>
+								</div>
+							</form>
+						</div>
 				</div>
 				<div class="col-1-of-2-big">
 					<div class="contact-us__adress">
@@ -277,10 +278,12 @@
 						<span class="contact-us__adress--text">Web: www.designagency.net</span>
 						<span class="contact-us__adress--text">E-mail: info@designagency.net</span>
 						<div class="contact-us__adress--map">
-							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab0f71c78d416e9b8e4c37014c9f8bc8b3ba78b26a140c2f8d8522501b20285fe&amp;width=457&amp;height=224&amp;lang=ru_RU&amp;scroll=true"></script>
+							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab0f71c78d416e9b8e4c37014c9f8bc8b3ba78b26a140c2f8d8522501b20285fe&amp;max-width=100%&amp;height=224&amp;lang=ru_RU&amp;scroll=true"></script>
 						</div>
 					</div>
 				</div>
+				</div>
+
 			</div>
 		</section>
 	</main>

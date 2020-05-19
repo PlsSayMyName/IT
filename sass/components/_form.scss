@@ -11,6 +11,13 @@
         padding-bottom: 8.5rem;
     }
 
+    &__group:last-of-type {
+
+        @include respond(tab-land) {
+            text-align: center;
+        }
+    }
+
     &__form {
         width: 50%;
     }

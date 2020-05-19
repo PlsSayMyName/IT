@@ -38,6 +38,20 @@
   font-style: normal;
   font-display: swap; }
 
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -56,6 +70,15 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 *:focus {
   outline: none; }
@@ -70,6 +93,9 @@ a {
   color: #505050;
   font-size: 4.5rem;
   margin-bottom: 16rem; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-primary {
+      font-size: 3.5rem; } }
   .heading-primary--main {
     display: inline-block;
     text-transform: uppercase;
@@ -77,6 +103,9 @@ a {
     letter-spacing: 0.3rem;
     line-height: 0.622;
     text-shadow: 0 0.9rem 1rem rgba(0, 0, 0, 0.24); }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        line-height: 1.5; } }
   .heading-primary--main_accent {
     display: inline-block;
     background-color: #b2f2ee;
@@ -88,6 +117,10 @@ a {
     white-space: nowrap;
     line-height: 0.622;
     text-shadow: 0 0.9rem 1rem rgba(0, 0, 0, 0.24); }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        white-space: normal;
+        line-height: 1.5; } }
   .heading-primary--sub_accent {
     display: inline-block;
     background-color: #b2f2ee;
@@ -123,6 +156,10 @@ a {
   line-height: 1.5rem;
   margin-bottom: 2.5rem;
   letter-spacing: .165rem; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-tertiary {
+      line-height: 2rem;
+      text-align: center; } }
 
 .paragraph {
   font-size: 1.6rem;
@@ -173,6 +210,10 @@ a {
 .form__group:nth-of-type(4) > .form__input {
   padding-bottom: 8.5rem; }
 
+@media only screen and (max-width: 75em) {
+  .form__group:last-of-type {
+    text-align: center; } }
+
 .form__form {
   width: 50%; }
 
@@ -207,7 +248,7 @@ a {
     border: transparent; }
 
 .footer {
-  padding: 10rem 0;
+  padding: 9rem 0;
   background-color: #262b2e; }
   .footer__head {
     font-size: 1.6rem;
@@ -234,6 +275,13 @@ a {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 1.3rem; }
+    @media only screen and (max-width: 75em) {
+      .row:not(:last-child) {
+        margin-bottom: 1.4rem; } }
+  @media only screen and (max-width: 75em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -242,6 +290,13 @@ a {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 1rem; }
+      @media only screen and (max-width: 75em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 1.4rem; } }
+    @media only screen and (max-width: 75em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 1rem) / 2); }
   .row .col-1-of-3 {
@@ -277,6 +332,9 @@ a {
     width: 39rem;
     height: 48.3rem;
     box-shadow: 0 0 3rem 0 rgba(20, 20, 21, 0.13); }
+    @media only screen and (max-width: 75em) {
+      .about-us__img-box {
+        width: 100%; } }
   .about-us__img {
     position: absolute;
     top: 50%;
@@ -285,6 +343,9 @@ a {
     width: 39rem;
     height: 48.3rem;
     object-fit: cover; }
+    @media only screen and (max-width: 75em) {
+      .about-us__img {
+        width: 100%; } }
 
 .featured-works {
   padding: 13rem 0;
@@ -293,6 +354,11 @@ a {
 .feature-box {
   margin-top: -2rem;
   margin-bottom: 1rem; }
+  .feature-box__img {
+    width: 100%; }
+  @media only screen and (max-width: 75em) {
+    .feature-box {
+      padding: 0 0 1rem 0; } }
 
 .our-team {
   background-color: #f9fbfb;
@@ -302,6 +368,9 @@ a {
   margin-top: -2rem;
   margin-bottom: 1rem;
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .our-team-box__img {
+      width: 100%; } }
   .our-team-box__inner {
     background-color: #76f4ea;
     opacity: .98;
@@ -336,8 +405,8 @@ a {
     animation: moveInBottom .5s ease-out; }
 
 .contact-us {
-  height: 100vh;
-  padding: 21rem 0;
+  height: 100%;
+  padding: 21rem 0 12rem 0;
   position: relative;
   background-image: linear-gradient(180deg, #f9fbfb 0%, rgba(255, 255, 255, 0.1) 50%, rgba(249, 251, 251, 0.1) 100%), url(/img/footer-bg.jpg);
   background-size: cover;
@@ -347,6 +416,13 @@ a {
     padding: 3rem;
     width: 61rem;
     height: 46rem; }
+    @media only screen and (max-width: 75em) {
+      .contact-us__form {
+        width: 100%; } }
+    @media only screen and (max-width: 56.25em) {
+      .contact-us__form {
+        max-width: 32rem;
+        margin: 0 auto; } }
   .contact-us__adress {
     background-color: #021623;
     margin-left: 7rem;
@@ -354,5 +430,17 @@ a {
     height: 46rem;
     width: 50rem;
     white-space: pre-line; }
+    @media only screen and (max-width: 75em) {
+      .contact-us__adress {
+        width: 100%;
+        margin: 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .contact-us__adress {
+        max-width: 32rem;
+        margin: 0 auto;
+        height: 50rem; } }
     .contact-us__adress--map {
       padding: .7rem 0; }
+      @media only screen and (max-width: 75em) {
+        .contact-us__adress--map {
+          padding: 0; } }

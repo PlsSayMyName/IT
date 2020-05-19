@@ -8,6 +8,10 @@
         width: 39rem;
         height: 48.3rem;
         box-shadow: 0 0 3rem 0 rgba(20, 20, 21, 0.13);
+
+        @include respond(tab-land) {
+            width: 100%;
+        }
     }
 
     &__img {
@@ -18,6 +22,10 @@
         width: 39rem;
         height: 48.3rem;
         object-fit: cover;
+
+        @include respond(tab-land) {
+            width: 100%;
+        }
     }
 }
 
@@ -29,6 +37,13 @@
 .feature-box {
     margin-top: -2rem;
     margin-bottom: 1rem;
+
+    &__img {
+        width: 100%;
+    }
+    @include respond(tab-land) {
+        padding: 0 0 1rem 0;
+    }
 }
 
 .our-team {
@@ -40,6 +55,13 @@
     margin-top: -2rem;
     margin-bottom: 1rem;
     position: relative;
+
+    &__img {
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
 
     &__inner {
         background-color: $color-blue;
@@ -59,7 +81,7 @@
         }
 
         &::before {
-            content: "";
+        content: "";
         position: absolute;
         top: -3rem;
         left: 1.8rem;
@@ -88,8 +110,8 @@
 }
 
 .contact-us {
-    height: 100vh;
-    padding: 21rem 0;
+    height: 100%;
+    padding: 21rem 0 12rem 0;
     position: relative;
     background-image: linear-gradient(180deg, rgba(249, 251, 251, 1) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(249, 251, 251, 0.1) 100%), url(/img/footer-bg.jpg);
     background-size: cover;
@@ -100,6 +122,15 @@
         padding: 3rem;
         width: 61rem;
         height: 46rem;
+
+        @include respond(tab-land) {
+            width: 100%;
+        }
+
+        @include respond(tab-port) {
+            max-width: 32rem;
+            margin: 0 auto;
+        }
     }
 
     &__adress {
@@ -110,8 +141,23 @@
         width: 50rem;
         white-space: pre-line;
 
+        @include respond(tab-land) {
+            width: 100%;
+            margin: 0;
+        }
+
+        @include respond(tab-port) {
+            max-width: 32rem;
+            margin: 0 auto;
+            height: 50rem;
+        }
+
         &--map {
             padding: .7rem 0;
+
+            @include respond (tab-land) {
+                padding: 0;
+            }
         }
     }
 }
